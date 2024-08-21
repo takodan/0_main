@@ -1,4 +1,4 @@
-# Define the name of the Wi-Fi adapter
+# Define the name of the Wi-Fi adapter or Wi-Fi SSID
 $wifiAdapterName = "Wi-Fi"
 $wifiName = "Wi-Fi"
 
@@ -15,7 +15,7 @@ function Test-InternetConnection {
 
 # Main loop, runs indefinitely
 while ($true) {
-    Write-Host "Checking internet connection..."
+    Write-Host "Checking internet connection..." -ForegroundColor Yellow
 
     # Check the internet connection
     if (-not (Test-InternetConnection)) {
@@ -25,8 +25,8 @@ while ($true) {
         # Disable-NetAdapter -Name $wifiAdapterName -Confirm:$false
 	netsh wlan disconnect
 
-        # Wait for 10 seconds
-        Start-Sleep -Seconds 10
+        # Wait for 30 seconds
+        Start-Sleep -Seconds 30
 
         # Enable Wi-Fi
         # Enable-NetAdapter -Name $wifiAdapterName -Confirm:$false
@@ -37,6 +37,6 @@ while ($true) {
         Write-Host "Internet connection is fine" -ForegroundColor Green
     }
 
-    # Wait for 5 minutes (300 seconds)
-    Start-Sleep -Seconds 300
+    # Wait for 3 minutes (180 seconds)
+    Start-Sleep -Seconds 180
 }
