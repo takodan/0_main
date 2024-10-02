@@ -12,3 +12,4 @@
     1. Cloud Engineer Certificate: https://www.coursera.org/professional-certificates/cloud-engineering-gcp
     2. Cloud Engineer Learning Path: https://www.cloudskillsboost.google/paths/11?locale=en
     3. Associate Cloud Engineer certification: https://cloud.google.com/learn/certification/cloud-engineer
+6. GraphQL
